@@ -25,6 +25,8 @@ group :development do
   gem 'cucumber'
   gem 'cucumber-rails'
   gem 'guard-cucumber'
+
+  gem 'guard-spork'
   gem 'growl'
 end
 
@@ -32,4 +34,6 @@ group :test do
   gem 'factory_girl_rails'
   gem 'database_cleaner'
   gem 'rb-fsevent', :require => false
+  gem 'spork', '~> 0.9.0.rc'
+  gem 'capybara'
 end
