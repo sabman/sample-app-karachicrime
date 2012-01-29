@@ -78,6 +78,9 @@ GEM
       guard (>= 0.8.3)
     guard-rspec (0.6.0)
       guard (>= 0.10.0)
+    guard-spork (0.5.1)
+      guard (>= 0.10.0)
+      spork (>= 0.8.4)
     haml (3.1.4)
     haml-rails (0.3.4)
       actionpack (~> 3.0)
@@ -149,6 +152,7 @@ GEM
       ffi (~> 1.0.9)
       multi_json (~> 1.0.4)
       rubyzip
+    spork (0.9.0)
     sprockets (2.1.2)
       hike (~> 1.2)
       rack (~> 1.0)
@@ -171,6 +175,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  capybara
   coffee-rails (~> 3.2.1)
   cucumber
   cucumber-rails
@@ -179,6 +184,7 @@ DEPENDENCIES
   growl
   guard-cucumber
   guard-rspec
+  guard-spork
   haml
   haml-rails
   jquery-rails
@@ -187,5 +193,6 @@ DEPENDENCIES
   rspec
   rspec-rails
   sass-rails (~> 3.2.3)
+  spork (~> 0.9.0.rc)
   sqlite3
   uglifier (>= 1.0.3)
