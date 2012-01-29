@@ -6,12 +6,6 @@
     = render 'layouts/stylesheets'
   %body
     .container
-      %header
-        %nav.round
-          %ul
-            %li= link_to "Home", "#"
-            %li= link_to "Help", "#"
-            %li= link_to "Sign in", "#"
-      = image_tag "logo.png", alt: "Sample App", class: "round"
+      = render 'layouts/header'
       %section.round
         = yield
