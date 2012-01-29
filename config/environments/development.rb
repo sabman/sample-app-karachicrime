@@ -34,4 +34,10 @@ SampleApp::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  config.generators do |g|
+    g.view_specs false
+    g.helper_specs false
+    g.fixture_replacement :factory_girl, :dir => 'spec/factories'
+  end
 end
