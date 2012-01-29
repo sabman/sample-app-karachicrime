@@ -1,6 +1,18 @@
 require 'spec_helper'
 
 describe PagesController do
+  render_views
+
+  pages = %w{ home contact about }
+
+  describe "Static Pages" do
+    pages.each do |page|
+      it "should have the right title" do
+        visit "/pages/#{page}"
+        page.should have_content(page)
+      end
+    end
+  end
 
   describe "GET 'home'" do
     it "returns http success" do
@@ -22,4 +34,5 @@ describe PagesController do
       response.should be_success
     end
   end
+
 end
