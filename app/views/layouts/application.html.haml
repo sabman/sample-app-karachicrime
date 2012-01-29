@@ -2,23 +2,10 @@
 %html
   %head
     %title=title
-    = csrf_meta_tags
-    /[if lt IE 9]
-      %script{:src => "http://html5shiv.googlecode.com/svn/trunk/html5.js"}
-
-    = stylesheet_link_tag 'blueprint/screen', media: 'screen'
-    = stylesheet_link_tag 'blueprint/print', media: 'print'
-    /[if lt IE 8]
-      = stylesheet_link_tag 'blueprint/ie' 
-    = stylesheet_link_tag 'custom', media: 'screen'
+    = csrf_meta_tags 
+    = render 'layouts/stylesheets'
   %body
     .container
-      %header
-        %nav.round
-          %ul
-            %li= link_to "Home", "#"
-            %li= link_to "Help", "#"
-            %li= link_to "Sign in", "#"
-      = image_tag "logo.png", alt: "Sample App", class: "round"
+      = render 'layouts/header'
       %section.round
         = yield
