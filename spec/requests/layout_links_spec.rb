@@ -21,4 +21,8 @@ describe "LayoutLinks" do
     page.should have_content("Help")
   end
 
+  it "should have a signup page at '/signup" do
+    visit '/signup'
+    page.should have_content("Sign up")
+  end
 end
