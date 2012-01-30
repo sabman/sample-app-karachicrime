@@ -28,6 +28,7 @@ group :development do
 
   gem 'guard-spork'
   gem 'growl'
+  gem 'annotate'
 end
 
 group :test do
