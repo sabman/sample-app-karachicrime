@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20120130090558
+# Schema version: 20120130220516
 #
 # Table name: users
 #
@@ -8,6 +8,10 @@
 #  email      :string(255)
 #  created_at :datetime        not null
 #  updated_at :datetime        not null
+#
+# Indexes
+#
+#  index_users_on_email  (email) UNIQUE
 #
 
 class User < ActiveRecord::Base
@@ -19,5 +23,5 @@ class User < ActiveRecord::Base
                     length: { maximum: 50 }
   validates :email, presence: true,
                     format: { with: email_regex },
-                    uniqueness: true
+                    uniqueness: {case_sensitive: false}
 end
