@@ -1,9 +1,14 @@
+$full-width: 710px;
+$background-color: #cff;
+$link-color: #09c;
+$visited-link-color: #069;
+
 .container {
-  width: 710px;
+  width: $full-width;
 }
 
 body {
-  background: #cff;
+  background: #afd;
 }
 
 /* ============== */
@@ -20,7 +25,7 @@ section{
   margin-top: 1em;
   font-size: 120%;
   padding: 20px;
-  background: #fff;
+  background: $background-color;
 }
 
 section h1 {
@@ -30,18 +35,19 @@ section h1 {
 /* ============= */
 /* === Links === */
 
+
 a {
   color: #09c;
   text-decoration: none;
-}
 
-a:hover {
-  color: #069;
-  text-decoration: underline;
-}
+  &:hover {
+    color: $visited-link-color;
+    text-decoration: underline;
+  }
 
-a:visited {
-  color: #069;
+  &:visited {
+    color: $visited-link-color;
+  }
 }
 
 /* ========== */
@@ -55,30 +61,30 @@ nav {
   padding: 0 0.7em;
   margin-top:10px;
   white-space: nowrap;
-}
 
-nav ul {
-  margin: 0;
-  padding: 0;
-}
+  ul {
+    margin: 0;
+    padding: 0;
 
-nav ul li {
-  list-style-type: none;
-  display: inline-block;
-  padding: 0.2em 0;
-}
+    li {
+      list-style-type: none;
+      display: inline-block;
+      padding: 0.2em 0;
 
-nav ul li a {
-  padding: 0 5px;
-  font-weight: bold;
-}
+      a {
+        padding: 0 5px;
+        font-weight: bold;
 
-nav ul li a:visited {
-  color: #09c;
-}
+        &:visited {
+          color: $link-color;
+        }
 
-nav ul li a:hover {
-  text-decoration: underline;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
 }
 
 /* Sign up button */
@@ -97,9 +103,9 @@ a.signup_button {
 
 /* Round corners */
 .round {
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius:	10px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
 }
 
 /* footer */
@@ -110,8 +116,9 @@ footer {
   width: 710px;
   margin-left: auto;
   margin-right: auto;
+
+  nav {
+    float: none;
+  }
 }
 
-footer nav {
-  float: none;
-}
