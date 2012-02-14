@@ -12,6 +12,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'bcrypt-ruby'
 
 group :development do
   gem 'haml-rails'

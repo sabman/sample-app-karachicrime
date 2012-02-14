@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20120131090133
+# Schema version: 20120214123815
 #
 # Table name: users
 #
@@ -9,6 +9,7 @@
 #  created_at         :datetime        not null
 #  updated_at         :datetime        not null
 #  encrypted_password :string(255)
+#  password_digest    :string(255)
 #
 # Indexes
 #
@@ -16,17 +17,19 @@
 #
 
 class User < ActiveRecord::Base
-  attr_accessor :password
   attr_accessible :name, :email, :password, :password_confirmation
-
-  email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  has_secure_password
 
   validates :name,  presence: true,
                     length: { maximum: 50 }
+
+  valid_email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+
   validates :email, presence: true,
-                    format: { with: email_regex },
+                    format: { with: valid_email_regex },
                     uniqueness: {case_sensitive: false}
   validates :password, confirmation: true,
                        presence: true,
                        length: { within: 6..40 }
+
 end
