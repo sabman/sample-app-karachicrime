@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe PagesController do
+describe StaticPagesController do
   render_views
 
   pages = %w{ home contact about help}
@@ -8,7 +8,7 @@ describe PagesController do
   describe "Static Pages" do
     pages.each do |page|
       it "'#{page}', should have the right title" do
-        visit "/pages/#{page}"
+        visit "/static_pages/#{page}"
         page.should have_content(page)
       end
     end
