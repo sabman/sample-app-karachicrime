@@ -8,7 +8,7 @@ describe StaticPagesController do
   describe "Static Pages" do
     pages.each do |page|
       it "'#{page}', should have the right title" do
-        visit "/static_pages/#{page}"
+        visit "/#{page}"
         page.should have_content(page)
       end
     end
