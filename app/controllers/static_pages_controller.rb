@@ -1,4 +1,4 @@
-class PagesController < ApplicationController
+class StaticPagesController < ApplicationController
   def home
   end
 
@@ -6,6 +6,7 @@ class PagesController < ApplicationController
   end
 
   def about
+    @title='About Us'
   end
 
   def help
