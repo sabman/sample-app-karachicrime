@@ -1,20 +1,21 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.0'
-
-gem 'sqlite3'
+gem 'rails', '3.2.1'
 gem 'haml'
 
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
+  gem 'sass-rails',   '>= 3.2.3'
+  gem 'coffee-rails', '>= 3.2.2'
+  gem 'uglifier', '>= 1.2.3'
 end
 
 gem 'jquery-rails'
 gem 'bcrypt-ruby'
+gem 'will_paginate'
+gem 'faker'
 
 group :development do
+  gem 'sqlite3'
   gem 'haml-rails'
 
   # == RSpec ==
@@ -38,4 +39,8 @@ group :test do
   gem 'rb-fsevent', :require => false
   gem 'spork', '~> 0.9.0.rc'
   gem 'capybara'
+end
+
+group :production do
+  gem 'pg'
 end
