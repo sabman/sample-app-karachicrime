@@ -6,11 +6,13 @@ describe "User pages" do
 
   describe "signup" do
     before { visit signup_path }
+
     describe "with invalid information" do
       it "should not create a new user" do
         expect { click_button "Sign up" }.not_to change(User, :count)
       end
     end
+
     describe "with valid information" do
       before do
         fill_in "Name",         with: "Example User"
@@ -21,6 +23,20 @@ describe "User pages" do
       it "should create a new user" do
         expect{ click_button "Sign up" }.to change(User, :count).by(1)
       end
+      describe "after saving the user" do
+        before { click_button "Sign up" }
+        let(:user) { User.find_by_email('user@example.com') }
+
+        it { should have_selector('title', text: user.name) }
+        it { should have_selector('div.flash.success', text: 'Welcome') }
+      end
+    end
+
+    describe "error messages" do
+      before{ click_button "Sign up" }
+      let(:error){ "errors prohibited this user from being saved" }
+      it { should have_selector('title', text: 'Sign up') }
+      it { should have_content(error) }
     end
   end
 
