@@ -30,7 +30,7 @@ group :development do
 
   gem 'guard-spork'
   gem 'growl'
-  gem 'annotate'
+  # gem 'annotate'
 end
 
 group :test do
