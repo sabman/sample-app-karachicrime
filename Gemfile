@@ -13,6 +13,7 @@ gem 'jquery-rails'
 gem 'bcrypt-ruby'
 gem 'will_paginate'
 gem 'ffaker'
+gem 'will_paginate'
 
 group :development do
   gem 'sqlite3'
