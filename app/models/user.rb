@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20120219203924
+# Schema version: 20120304150254
 #
 # Table name: users
 #
@@ -11,6 +11,7 @@
 #  encrypted_password :string(255)
 #  password_digest    :string(255)
 #  remember_token     :string(255)
+#  admin              :boolean         default(FALSE)
 #
 # Indexes
 #
