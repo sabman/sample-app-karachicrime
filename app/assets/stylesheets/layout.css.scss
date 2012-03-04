@@ -195,11 +195,19 @@ div.field, div.actions {
     padding: 10px 5px 5px 5px;
   }
  
-  ul{
+  ul {
     margin-bottom: 0px;
     li {
       font-size: 12px;
       list-style: square;
     }
   } 
+}
+
+ul.users {
+  margin-top: 1em;
+
+  li{
+    list-style: none;
+  }
 }
