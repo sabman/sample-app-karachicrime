@@ -12,7 +12,7 @@ end
 gem 'jquery-rails'
 gem 'bcrypt-ruby'
 gem 'will_paginate'
-gem 'faker'
+gem 'ffaker'
 
 group :development do
   gem 'sqlite3'
@@ -30,7 +30,7 @@ group :development do
 
   gem 'guard-spork'
   gem 'growl'
-  # gem 'annotate'
+  gem 'annotate'
 end
 
 group :test do
