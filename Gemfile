@@ -26,7 +26,7 @@ group :development do
 
   # == Cucumber ==
   gem 'cucumber'
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', '>= 1.3.0'
   gem 'guard-cucumber'
 
   gem 'guard-spork'
@@ -39,7 +39,7 @@ group :test do
   gem 'database_cleaner'
   gem 'rb-fsevent', :require => false
   gem 'spork', '~> 0.9.0.rc'
-  gem 'capybara'
+  gem 'capybara', '>= 1.1.2'
 end
 
 group :production do
