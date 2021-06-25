@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.1'
+gem 'rails', '4.0.0'
 gem 'haml'
 
 group :assets do
